@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./index.css">
+  <title>TDP Frontend 1 | Transaction Splitter</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>TRANSACTION <br> SPLITTER</h1>
+  <main class="container">
+    <section class="wrapper_1">
+      <div class="sub_wrapper_1">
+        <div class="l_bill">
+          <label for="bill">Transaksi</label><p id="errbill"></p>
+        </div>
+        <input id="bill" maxlength="17" placeholder="0">
+      </div>
+      <div class="sub_wrapper_1">
+        <div class="l_number">
+          <label for="number_people">Jumlah Orang</label><p id="errnum"></p>
+        </div>
+        <input id="number_people" placeholder="0">
+      </div>
+      <div>
+        <p>Tip Yang Diikhlaskan</p>
+        <div class="button_wrapper">
+          <div>
+            <button class="tip-percent" value="0.05">5%</button>
+            <button class="tip-percent" value="0.1">10%</button>
+            <button class="tip-percent" value="0.15">15%</button>
+          </div>
+          <div>
+            <button class="tip-percent" value="0.25">25%</button>
+            <button class="tip-percent" value="0.5">50%</button>
+            <input class="b_input custom-percent" placeholder="Custom" id="custom-percent" min="0" maxlength="3" type="number">
+          </div>
+        </div>
+        <div class="button_wrapper_mobile">
+          <div>
+            <button class="tip-percent" value="0.05">5%</button>
+            <button class="tip-percent" value="0.1">10%</button>
+          </div>
+          <div>
+            <button class="tip-percent" value="0.15">15%</button>
+            <button class="tip-percent" value="0.25">25%</button>
+          </div>
+          <div>
+            <button class="tip-percent" value="0.5">50%</button>
+            <input class="b_input custom-percent" placeholder="Custom" id="custom-percent-m" min="0" maxlength="3" type="number">
+          </div>
+        </div>
+      </div>
+      <button class="btn-calculate">Calculate</button>
+    </section>
+    <section class="wrapper_2">
+      <div class="sub-wrapper_1">
+        <div>
+          <p>Jumlah Tip</p>
+          <span>/ orang</span>
+        </div>
+        <div><h2 id="tip-amount">Rp.0</h2></div>
+      </div>
+      <div class="sub-wrapper_2">
+        <div>
+          <p>Total yang Dibayar</p>
+          <span>/ orang</span>
+        </div>
+        <div><h2 id="total-pay">Rp.0</h2></div>
+      </div>
+      <button class="btn-reset">Reset</button>
+    </section>
+  </main>
+  <!-- <div class="attribution">
+    Coded by <a href="https://github.com/irsyadfptr" target="_blank">Putranto</a>.
+  </div> -->
+  <script src="./script.js"></script>
+</body>
+</html>
